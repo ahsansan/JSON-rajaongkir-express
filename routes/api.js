@@ -4,7 +4,7 @@ const axios = require("axios");
 
 // Config Defaults Axios dengan Detail Akun Rajaongkir
 axios.defaults.baseURL = "https://api.rajaongkir.com/starter";
-axios.defaults.headers.common["key"] = "c32a8917c562ad64f747e24b0cc0a289";
+axios.defaults.headers.common["key"] = "618268291659caf519b47dfc5f222110";
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 
