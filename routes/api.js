@@ -4,7 +4,7 @@ const axios = require("axios");
 
 // Config Defaults Axios dengan Detail Akun Rajaongkir
 axios.defaults.baseURL = "https://api.rajaongkir.com/starter";
-axios.defaults.headers.common["key"] = "618268291659caf519b47dfc5f222110";
+axios.defaults.headers.common["key"] = "fce1d08d7a809149873450f3426b3139";
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 
@@ -12,6 +12,14 @@ axios.defaults.headers.post["Content-Type"] =
 router.get("/provinsi", (req, res) => {
   axios
     .get("/province")
+    .then((response) => res.json(response.data))
+    .catch((err) => res.send(err));
+});
+
+// Router GET city
+router.get("/kota", (req, res) => {
+  axios
+    .get(`/city`)
     .then((response) => res.json(response.data))
     .catch((err) => res.send(err));
 });
